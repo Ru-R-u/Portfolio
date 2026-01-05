@@ -1,0 +1,614 @@
+:root {
+  --primary: #a855f7; /* Violet */
+  --primary-dark: #7e22ce;
+  --bg-dark: #000000;
+  --card-bg: #111111;
+  --text-main: #f3f4f6;
+  --text-dim: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* --- BARRE DE NAVIGATION --- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.2rem 5%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* --- ACCUEIL (HERO) --- */
+#accueil {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #000000 70%);
+  padding: 0 10%;
+  gap: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #fff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+  color: var(--text-dim);
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  word-spacing: 0.2rem;
+  opacity: 50% !important;
+}
+
+.btn-main {
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+  background: var(--primary-dark);
+}
+
+/* --- SECTIONS GÉNÉRALES --- */
+section {
+  padding: 100px 10%;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: var(--primary);
+}
+
+/* --- SECTION PROJETS (Grille) --- */
+.project-grid {
+  display: grid;
+  /* On force 2 colonnes égales sur PC */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Style des cartes techniques */
+.tech-card {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid rgba(168, 85, 247, 0.1) !important;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.tech-card:hover {
+  border-color: var(--primary) !important;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15);
+}
+
+.tech-img-container {
+  position: relative;
+  width: 100%;
+  height: 220px; /* Hauteur fixe pour que les 2 cartes soient alignées */
+  overflow: hidden;
+}
+
+.tech-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tech-card:hover .tech-img {
+  transform: scale(1.1);
+}
+
+.tech-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--primary);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.tech-body {
+  padding: 2.5rem 1.5rem 1.5rem;
+  position: relative;
+  flex-grow: 1;
+}
+
+.tech-icon-circle {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  width: 55px;
+  height: 55px;
+  background: #111;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.tech-tags {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+.tech-tags span {
+  font-size: 0.7rem;
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--primary);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* --- ADAPTATION MOBILE (IMPORTANT) --- */
+@media (max-width: 900px) {
+  .project-grid {
+    /* Sur tablette/mobile on repasse à une seule colonne */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tech-img-container {
+    height: 200px; /* Un peu moins haut sur petit écran */
+  }
+}
+/* MODALE STYLE */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+}
+
+.modal-content {
+  margin: 5% auto;
+  width: 90%;
+  max-width: 1100px;
+  background: var(--bg-dark);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 20px;
+  position: relative;
+  color: white;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--primary);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-image-container {
+  flex: 1.2;
+  min-width: 350px;
+  padding: 20px;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.modal-text {
+  flex: 1;
+  padding: 40px;
+}
+
+.modal-text h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.modal-section h4 {
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.modal-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.clickable-project {
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .modal-body {
+    flex-direction: column;
+  }
+  .modal-image-container {
+    min-width: 100%;
+  }
+}
+
+/* --- PARCOURS / EDUCATION --- */
+.parcours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Style spécifique pour les cartes avec images */
+.parcours-card {
+  padding: 0 !important; /* On enlève le padding pour que l'image touche les bords */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px; /* Ajuste la hauteur selon ton souhait */
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Important : l'image remplit l'espace sans se déformer */
+  transition: transform 0.5s ease;
+}
+
+/* Le dégradé qui fond l'image vers le noir du bas de la carte */
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, var(--card-bg) 0%, transparent 100%);
+}
+
+.card-text-content {
+  padding: 1.5rem;
+}
+
+/* Effet au survol : zoom léger sur l'image */
+.parcours-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+/* Ajoute une lueur violette subtile sur la carte au survol */
+.parcours-card:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+  border-color: var(--primary);
+}
+
+/* --- EXPÉRIENCES --- */
+.experience-box {
+  border-left: 2px solid var(--primary);
+  padding: 0 0 2rem 2rem;
+  position: relative;
+}
+
+.experience-box::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.experience-date {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Container de la timeline */
+.experience-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-left: 2px solid rgba(168, 85, 247, 0.3);
+  padding-left: 40px;
+}
+
+/* Chaque bloc d'expérience */
+.experience-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+/* Le point sur la ligne de temps */
+.exp-dot {
+  position: absolute;
+  left: -51px; /* Aligné avec la bordure de la timeline */
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-dark);
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary);
+  z-index: 10;
+}
+
+/* La carte qui contient texte + image */
+.exp-card {
+  display: flex;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden; /* Pour que l'image ne dépasse pas */
+  transition: 0.4s ease;
+}
+
+.exp-card:hover {
+  border-color: var(--primary);
+  transform: translateX(10px); /* Petit décalage vers la droite au survol */
+}
+
+/* Côté texte */
+.exp-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+/* Côté image */
+.exp-image {
+  width: 250px;
+  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.exp-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%); /* Petit effet pro, redevient coloré au survol */
+  transition: 0.5s;
+}
+
+.exp-card:hover .exp-image img {
+  filter: grayscale(0%);
+  scale: 1.1;
+}
+
+/* Style des listes dans les expériences */
+.exp-list {
+  list-style: none; /* On enlève les points noirs par défaut */
+  padding-left: 5px;
+  margin-top: 10px;
+}
+
+.exp-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+/* On crée la puce personnalisée en violet */
+.exp-list li::before {
+  content: "•"; /* Utilisation d'un point */
+  position: absolute;
+  left: 0;
+  color: var(--primary); /* Ton violet néon */
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Optionnel : effet de survol sur la ligne */
+.exp-list li:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+/* Adaptation Mobile */
+@media (max-width: 768px) {
+  .exp-card {
+    flex-direction: column;
+  }
+  .exp-image {
+    width: 100%;
+    height: 150px;
+    min-width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+  }
+  .experience-timeline {
+    padding-left: 25px;
+  }
+  .exp-dot {
+    left: -36px;
+  }
+}
+
+/* --- COMPÉTENCES --- */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-tag {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.skill-tag:hover {
+  background: var(--primary);
+}
+
+/* --- CONTACT --- */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.info-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: 0.3s;
+}
+
+.info-link:hover {
+  color: var(--primary);
+}
+
+input,
+textarea {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  color: white;
+  border-radius: 10px;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+footer {
+  padding: 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .parcours-grid,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}

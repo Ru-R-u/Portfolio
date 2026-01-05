@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruben DOS SANTOS TEIXEIRA | Portfolio</title>
+
+    <!-- Polices & Icones -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">RUBEN.DST</div>
+      <div class="nav-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#projets">Projets</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#experience">Expériences</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header id="accueil">
+      <p
+        style="color: var(--primary); font-weight: 600; letter-spacing: 3px"
+        data-aos="fade-down"
+      >
+        STUDENT GEII
+      </p>
+      <h1 class="hero-title" data-aos="fade-up">Ruben Dos Santos Teixeira</h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="100">
+        Je m'appelle Ruben DOS SANTOS TEIXEIRA, j'ai 19 ans et je suis étudiant
+        en deuxième année du BUT Génie Électrique et Informatique Industrielle à
+        l'IUT de Toulouse.
+        <br /><br />Je vous propose de découvrir mon site portfolio qui regroupe
+        mes projets, mes compétences et mes expériences.
+      </p>
+      <a
+        href="#projets"
+        class="btn-main"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        >Voir mon travail</a
+      >
+    </header>
+
+    <section id="projets">
+      <div class="section-header">
+        <h2 data-aos="fade-right">Projets Réalisés</h2>
+      </div>
+
+      <!-- ON OUVRE UNE SEULE FOIS LA GRILLE ICI -->
+      <div class="project-grid">
+        <!-- PROJET 1 : Chaîne de Production -->
+        <div
+          class="project-card tech-card clickable-project"
+          data-aos="fade-up"
+          data-title="Chaîne de Production"
+          data-img="/Images/ChaineProduction.png"
+          data-desc="La chaîne de production vise à trier automatiquement les pièces selon leur couleur."
+          data-team="Pour ce projet, nous avons travaillé en équipes de huit personnes, la maquette comportant cinq stations à programmer successivement."
+          data-contrib="J'ai été en charge de la programmation des stations 1 et 3, assurant leur intégration fluide dans le système global."
+        >
+          <div class="tech-img-container">
+            <img
+              src="/Images/ChaineProduction.png"
+              alt="Chaîne de Production"
+              class="tech-img"
+            />
+            <div class="tech-badge">Automatisme</div>
+          </div>
+          <div class="tech-body">
+            <div class="tech-icon-circle"><i data-lucide="cpu"></i></div>
+            <h3>Chaîne de Production</h3>
+            <p>
+              Système de tri automatique par couleur via automate industriel.
+            </p>
+            <div class="tech-tags">
+              <span>Festo</span><span>API</span><span>Tri Automatique</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 2 : SmartCar -->
+        <div
+          class="project-card tech-card clickable-project"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-title="SmartCar Bluetooth"
+          data-img="/Images/SmartCar.png"
+          data-desc="Conception d'un circuit comportant des composants dimensionnés et soudés. Cette carte gère les signaux de la voiture et permet un pilotage à distance via une liaison Bluetooth."
+        >
+          <div class="tech-img-container">
+            <img src="/Images/SmartCar.png" alt="SmartCar" class="tech-img" />
+            <div class="tech-badge">Électronique & Code</div>
+          </div>
+          <div class="tech-body">
+            <div class="tech-icon-circle"><i data-lucide="bluetooth"></i></div>
+            <h3>SmartCar</h3>
+            <p>
+              Pilotage d'un véhicule autonome via une carte de gestion dédiée.
+            </p>
+            <div class="tech-tags">
+              <span>Dimensionnement</span><span>Soudure CMS</span
+              ><span>Bluetooth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="parcours">
+      <div class="section-header" style="margin-top: 6rem">
+        <h2 data-aos="fade-right">Parcours Scolaire</h2>
+      </div>
+      <div class="parcours-grid">
+        <div class="project-card parcours-card" data-aos="fade-right">
+          <!-- Conteneur d'image avec superposition -->
+          <div class="card-image-wrapper">
+            <img
+              src="/Images/iut.jpeg"
+              alt="IUT Paul Sabatier"
+              class="card-img"
+            />
+            <div class="image-overlay"></div>
+          </div>
+
+          <!-- Contenu texte -->
+          <div class="card-text-content">
+            <h4 style="color: var(--primary); margin-bottom: 0.5rem">
+              BUT GEII AII
+            </h4>
+            <p><strong>IUT Paul Sabatier (2024-2026)</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-dim)">
+              Parcours Automatisme et Informatique Industrielle. Deuxième année.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card parcours-card" data-aos="fade-right">
+          <div class="card-image-wrapper">
+            <img
+              src="/Images/lycee.jpg"
+              alt="IUT Paul Sabatier"
+              class="card-img"
+            />
+            <div class="image-overlay"></div>
+          </div>
+          <div class="card-text-content">
+            <h4 style="color: var(--primary); margin-bottom: 0.5rem">
+              Bac STI2D
+            </h4>
+            <p><strong>Lycée Stéphane Hessel (2022-2024)</strong></p>
+            <p style="font-size: 0.9rem; color: var(--text-dim)">
+              Spécialité Industrie & Développement Durable. Obtention mention
+              Assez Bien.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-header">
+        <h2 data-aos="fade-right">Expériences Pro</h2>
+      </div>
+
+      <div class="experience-timeline">
+        <div class="experience-item" data-aos="fade-up">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <div class="exp-content">
+              <div class="experience-date">2024 - 2025</div>
+              <h3>Maintenance Logistique - DICAM</h3>
+              <p style="margin-top: 0.5rem; margin-bottom: 0.5rem">
+                Chargé de la maintenance de logements étudiants :
+              </p>
+              <ul class="exp-list">
+                <li>Remplacement des plaques de cuisson</li>
+                <li>Changement des mitigeurs de cuisine</li>
+                <li>Substitution des ampoules</li>
+              </ul>
+            </div>
+            <div class="exp-image">
+              <img src="/Images/studio.jpg" alt="Maintenance DICAM" />
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPÉRIENCE 2 - Jeun'S'tival -->
+        <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <div class="exp-content">
+              <div class="experience-date">2024</div>
+              <h3>Organisation Évènementielle - Jeun'S'tival</h3>
+              <p style="margin-top: 0.5rem; margin-bottom: 0.5rem">
+                Chargé d’aider à l’organisation d’un festival destiné aux jeunes
+                :
+              </p>
+              <ul class="exp-list">
+                <li>Établir le planning</li>
+                <li>Installer les décorations et les stands</li>
+                <li>Animer les activités</li>
+              </ul>
+            </div>
+            <div class="exp-image">
+              <img src="/Images/jeun.jpeg" alt="Festival Jeun'S'tival" />
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPÉRIENCE 3 - Babysitting -->
+        <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <div class="exp-content">
+              <div class="experience-date">2018 - 2025</div>
+              <h3>Services à la personne</h3>
+              <p style="margin-top: 0.5rem; margin-bottom: 0.5rem">
+                En charge d’enfants (2 à 12 ans) :
+              </p>
+              <ul class="exp-list">
+                <li>Préparer les repas</li>
+                <li>Organiser des activités ludiques</li>
+                <li>Assurer la surveillance</li>
+              </ul>
+            </div>
+            <div class="exp-image">
+              <img src="/Images/baby.jpg" alt="Babysitting" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" style="background: #080808">
+  <div class="section-header">
+    <h2 data-aos="fade-right">Compétences Techniques</h2>
+  </div>
+  
+  <!-- Conception & Production -->
+  <div style="margin-bottom: 3rem">
+    <h3 style="margin-bottom: 1.5rem; color: #fff">
+      Conception & Production
+    </h3>
+    <div class="skill-list" data-aos="fade-up">
+      <div class="skill-tag">Analyse Fonctionnelle</div>
+      <div class="skill-tag">Dimensionnement Composant</div>
+      <div class="skill-tag">Soudure CMS</div>
+      <div class="skill-tag">Soudure Traversant</div>
+      <div class="skill-tag">Mise En Œuvre</div>
+      <div class="skill-tag">Choix Outils</div>
+      <div class="skill-tag">Cahier Fabrication PCB</div>
+      <div class="skill-tag">Bilan Matériaux</div>
+      <div class="skill-tag">Implantation PCB</div>
+    </div>
+  </div>
+
+  <!-- Vérification & Test -->
+  <div>
+    <h3 style="margin-bottom: 1.5rem; color: #fff">Vérification & Test</h3>
+    <div class="skill-list" data-aos="fade-up" data-aos-delay="100">
+      <div class="skill-tag">Estimation Coût Carte</div>
+      <div class="skill-tag">Simulation Proteus</div>
+      <div class="skill-tag">Elaborer Tests</div>
+      <div class="skill-tag">Debug VSCode</div>
+      <div class="skill-tag">Sondage Circuit</div>
+      <div class="skill-tag">Analyse Oscillo</div>
+      <div class="skill-tag">Validation Fonction</div>
+      <div class="skill-tag">Points Mesure</div>
+      <div class="skill-tag">Test Multimètre</div>
+      <div class="skill-tag">Test Oscillo</div>
+      <div class="skill-tag">Diagnostic Système</div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contact">
+      <div class="section-header">
+        <h2 data-aos="fade-right">Coordonnées</h2>
+      </div>
+      <div class="contact-container">
+        <div data-aos="fade-up">
+          <a href="tel:0629676845" class="info-link"
+            ><i data-lucide="phone"></i> 06 29 67 68 45</a
+          >
+          <a href="mailto:ruben.dossantos112@gmail.com" class="info-link"
+            ><i data-lucide="mail"></i> ruben.dossantos112@gmail.com</a
+          >
+          <div class="info-link">
+            <i data-lucide="map-pin"></i>31860 Labarthe-sur-Lèze
+          </div>
+          <br />
+          <a
+            href="Curriculum_Vitae.pdf"
+            target="_blank"
+            class="btn-main"
+            style="display: inline-block"
+            >Visualiser mon CV (.pdf)</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Ruben Dos Santos Teixeira | Profil Informatique Industrielle</p>
+    </footer>
+
+    <!-- Fenêtre Modale -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal"><i data-lucide="x"></i></span>
+        <div class="modal-body">
+          <div class="modal-image-container">
+            <img src="" id="modal-img" alt="Projet" />
+          </div>
+          <div class="modal-text">
+            <h2 id="modal-title">Titre du Projet</h2>
+
+            <div class="modal-section">
+              <h4>Description du projet :</h4>
+              <p id="modal-desc"></p>
+            </div>
+
+            <div class="modal-section" id="section-team">
+              <h4>Organisation de l'équipe :</h4>
+              <p id="modal-team"></p>
+            </div>
+
+            <div class="modal-section" id="section-contrib">
+              <h4>Contributions personnelles :</h4>
+              <p id="modal-contrib"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      lucide.createIcons();
+      AOS.init({ duration: 1000, once: true });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("project-modal");
+        const cards = document.querySelectorAll(".clickable-project");
+        const closeBtn = document.querySelector(".close-modal");
+
+        cards.forEach((card) => {
+          card.onclick = function () {
+            // 1. Récupération des données
+            const img = this.getAttribute("data-img");
+            const title = this.getAttribute("data-title");
+            const desc = this.getAttribute("data-desc");
+            const team = this.getAttribute("data-team");
+            const contrib = this.getAttribute("data-contrib");
+
+            // 2. Remplissage des champs de base
+            document.getElementById("modal-img").src = img;
+            document.getElementById("modal-title").innerText = title;
+            document.getElementById("modal-desc").innerText = desc;
+
+            // 3. Gestion intelligente des sections optionnelles
+            // Section EQUIPE
+            if (team) {
+              document.getElementById("modal-team").innerText = team;
+              document.getElementById("section-team").style.display = "block";
+            } else {
+              document.getElementById("section-team").style.display = "none";
+            }
+
+            // Section CONTRIBUTIONS
+            if (contrib) {
+              document.getElementById("modal-contrib").innerText = contrib;
+              document.getElementById("section-contrib").style.display =
+                "block";
+            } else {
+              document.getElementById("section-contrib").style.display = "none";
+            }
+
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+          };
+        });
+
+        closeBtn.onclick = function () {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
