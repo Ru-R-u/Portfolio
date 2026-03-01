@@ -1,16 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ruben DOS SANTOS TEIXEIRA | Portfolio</title>
-
     <!-- Polices & Icones -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
@@ -29,27 +24,15 @@
     </nav>
 
     <header id="accueil">
-      <p
-        style="color: var(--primary); font-weight: 600; letter-spacing: 3px"
-        data-aos="fade-down"
-      >
+      <p style="color: var(--primary); font-weight: 600; letter-spacing: 3px" data-aos="fade-down">
         ETUDIANT GEII
       </p>
       <h1 class="hero-title" data-aos="fade-up">Ruben Dos Santos Teixeira</h1>
       <p class="hero-sub" data-aos="fade-up" data-aos-delay="100">
-        J'ai 19 ans et je suis étudiant
-        en deuxième année du BUT Génie Électrique et Informatique Industrielle à
-        l'IUT de Toulouse.
-        <br /><br />Je vous propose de découvrir mon site portfolio qui regroupe
-        mes projets, mes compétences et mes expériences.
+        J'ai 19 ans et je suis étudiant en deuxième année du BUT Génie Électrique et Informatique Industrielle à l'IUT de Toulouse.
+        <br /><br />Je vous propose de découvrir mon site portfolio qui regroupe mes projets, mes compétences et mes expériences.
       </p>
-      <a
-        href="#projets"
-        class="btn-main"
-        data-aos="zoom-in"
-        data-aos-delay="200"
-        >Voir mon travail</a
-      >
+      <a href="#projets" class="btn-main" data-aos="zoom-in" data-aos-delay="200">Voir mon travail</a>
     </header>
 
     <section id="projets">
@@ -57,46 +40,65 @@
         <h2 data-aos="fade-right">Projets Réalisés</h2>
       </div>
 
-      <!-- ON OUVRE UNE SEULE FOIS LA GRILLE ICI -->
       <div class="project-grid">
-        <!-- PROJET 1 : Chaîne de Production -->
+        <!-- PROJET 1 -->
         <div
           class="project-card tech-card clickable-project"
           data-aos="fade-up"
           data-title="Chaîne de Production"
-          data-img="Images/ChaineProduction.png"
-          data-desc="La chaîne de production vise à trier automatiquement les pièces selon leur couleur."
-          data-team="Pour ce projet, nous avons travaillé en équipes de huit personnes, la maquette comportant cinq stations à programmer successivement."
-          data-contrib="J'ai été en charge de la programmation des stations 1 et 3, assurant leur intégration fluide dans le système global."
+          data-images="Images/ChaineProduction.png,Images/lycee.jpg"
+          data-descs="Description de la première image de la chaîne de production.|Description de la deuxième image expliquant un autre aspect du projet."
         >
           <div class="tech-img-container">
-            <img
-              src="Images/ChaineProduction.png"
-              alt="Chaîne de Production"
-              class="tech-img"
-            />
+            <img src="Images/ChaineProduction.png" alt="Chaîne de Production" class="tech-img" />
             <div class="tech-badge">Automatisme</div>
           </div>
           <div class="tech-body">
             <div class="tech-icon-circle"><i data-lucide="cpu"></i></div>
             <h3>Chaîne de Production</h3>
-            <p>
-              Système de tri automatique par couleur via automate industriel.
-            </p>
+            <p>Système de tri automatique par couleur via automate industriel.</p>
             <div class="tech-tags">
               <span>Festo</span><span>API</span><span>Tri Automatique</span>
             </div>
           </div>
         </div>
 
-        <!-- PROJET 2 : SmartCar -->
+        <!-- PROJET 2 -->
         <div
           class="project-card tech-card clickable-project"
           data-aos="fade-up"
           data-aos-delay="100"
           data-title="SmartCar Bluetooth"
-          data-img="Images/SmartCar.png"
-          data-desc="Conception d'un circuit comportant des composants dimensionnés et soudés. Cette carte gère les signaux de la voiture et permet un pilotage à distance via une liaison Bluetooth."
+          data-images="Images/SmartCar.png,Images/SmartCar1.png,Images/SmartCar2.png"
+          data-descs="Conception de la carte électronique d'une voiture pilotée via Bluetooth sur un téléphone. La voiture comporte un radar anticollisions, des phares alimentés selon la luminosité, et un klaxon personnalisé.
+
+                      -Routage de la carte sur Proteus
+
+                      - Dimensionnement et soudure des composants 
+
+                      - Code en C++ d'une carte Nucléo, fixée sur la carte dimensionnée
+                      |
+                      - Dimensionner les composants (technologie, valeur, puissance admissible...), et les simuler sur Proteus pour valider le dimensionnement.
+
+                      - Choisir le bon fer à souder, repérer la référence ou la valeur du composant, choisir l'étain selon le type de composant, et vérifier le sens d'implantation si nécessaire avant de souder.
+
+                      - Évaluer la qualité des soudure : esthétique de la carte, de la conductivité des soudures.
+
+                      - Effectuer des séries de tests pour vérifier le fonctionnement du matériel soudé.
+                      |
+                      Ensuite pour la partie programmation, je suis passé sur Visual Studio Code pour coder une carte programmable Nucléo.
+                      
+                      - Un bargraphe pour l'état de la batterie
+                      
+                      -La gestion d'un buzzer pour le klaxon
+                      
+                      -Les PWM pour la propulsion avant/arrière
+                      
+                      -Un capteur de température
+                      
+                      -Une fonction anticollision avec des capteurs Av et Arr
+                      
+                      -Un affichage et un contrôle de chacune de ces fonctions via une interface Bluetooth téléphone sur l'app RemoteXY"
         >
           <div class="tech-img-container">
             <img src="Images/SmartCar.png" alt="SmartCar" class="tech-img" />
@@ -105,67 +107,41 @@
           <div class="tech-body">
             <div class="tech-icon-circle"><i data-lucide="bluetooth"></i></div>
             <h3>SmartCar</h3>
-            <p>
-              Pilotage d'un véhicule autonome via une carte de gestion dédiée.
-            </p>
+            <p>Pilotage d'un véhicule autonome via une carte de gestion dédiée.</p>
             <div class="tech-tags">
-              <span>Dimensionnement</span><span>Soudure CMS</span
-              ><span>Bluetooth</span>
+              <span>Dimensionnement</span><span>Soudure CMS</span><span>Bluetooth</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ... Sections Parcours, Experience, Competences, Contact ... -->
     <section id="parcours">
       <div class="section-header" style="margin-top: 6rem">
         <h2 data-aos="fade-right">Parcours Scolaire</h2>
       </div>
       <div class="parcours-grid">
         <div class="project-card parcours-card" data-aos="fade-right">
-          <!-- Conteneur d'image avec superposition -->
           <div class="card-image-wrapper">
-            <img
-              src="Images/iut.jpeg"
-              alt="IUT Paul Sabatier"
-              class="card-img"
-            />
+            <img src="Images/iut.jpeg" alt="IUT" class="card-img" />
             <div class="image-overlay"></div>
           </div>
-
-          <!-- Contenu texte -->
           <div class="card-text-content">
-            <h4 style="color: var(--primary); margin-bottom: 0.5rem">
-              BUT GEII AII
-            </h4>
+            <h4 style="color: var(--primary); margin-bottom: 0.5rem">BUT GEII AII</h4>
             <p><strong>IUT Paul Sabatier (2024-2026)</strong></p>
-            <p style="color: var(--text-dim)">
-              <br>Deuxième année du BUT GEII (Génie Électrique et Informatique industrielle) parcours Automatisme et Informatique Industrielle (AII)
-              <br><br>115 Route de Narbonne, 31000 Toulouse
-            </p>
           </div>
         </div>
-
         <div class="project-card parcours-card" data-aos="fade-right">
-          <div class="card-image-wrapper">
-            <img
-              src="Images/lycee.jpg"
-              alt="IUT Paul Sabatier"
-              class="card-img"
-            />
-            <div class="image-overlay"></div>
+            <div class="card-image-wrapper">
+              <img src="Images/lycee.jpg" alt="Lycée" class="card-img" />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="card-text-content">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem">Bac STI2D</h4>
+              <p><strong>Lycée Stéphane Hessel (2022-2024)</strong></p>
+            </div>
           </div>
-          <div class="card-text-content">
-            <h4 style="color: var(--primary); margin-bottom: 0.5rem">
-              Bac STI2D
-            </h4>
-            <p><strong>Lycée Stéphane Hessel (2022-2024)</strong></p>
-            <p style="color: var(--text-dim)">
-              <br>Baccalauréat technologique STI2D (Sciences et Technologies de l'Industrie et du Développement Durable) obtenu avec mention Assez Bien.
-              <br><br>44 Chemin Cassaing, 31079 Toulouse
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -243,6 +219,7 @@
       </div>
     </section>
 
+
     <section id="competences" style="background: #080808">
   <div class="section-header">
     <h2 data-aos="fade-right">Compétences Techniques</h2>
@@ -285,30 +262,16 @@
   </div>
 </section>
 
-
     <section id="contact">
       <div class="section-header">
         <h2 data-aos="fade-right">Coordonnées</h2>
       </div>
       <div class="contact-container">
         <div data-aos="fade-up">
-          <a href="tel:0629676845" class="info-link"
-            ><i data-lucide="phone"></i> 06 29 67 68 45</a
-          >
-          <a href="mailto:ruben.dossantos112@gmail.com" class="info-link"
-            ><i data-lucide="mail"></i> ruben.dossantos112@gmail.com</a
-          >
-          <div class="info-link">
-            <i data-lucide="map-pin"></i>31860 Labarthe-sur-Lèze
-          </div>
+          <a href="mailto:ruben.dossantos112@gmail.com" class="info-link"><i data-lucide="mail"></i> ruben.dossantos112@gmail.com</a>
+          <div class="info-link"><i data-lucide="map-pin"></i>31860 Labarthe-sur-Lèze</div>
           <br />
-          <a
-            href="Curriculum_Vitae.pdf"
-            target="_blank"
-            class="btn-main"
-            style="display: inline-block"
-            >Visualiser mon CV (.pdf)</a
-          >
+          <a href="Curriculum_Vitae.pdf" target="_blank" class="btn-main">Visualiser mon CV (.pdf)</a>
         </div>
       </div>
     </section>
@@ -317,30 +280,22 @@
       <p>© 2026 Ruben Dos Santos Teixeira | Profil Informatique Industrielle</p>
     </footer>
 
-    <!-- Fenêtre Modale -->
+    <!-- Fenêtre Modale (Centrée verticalement) -->
     <div id="project-modal" class="modal">
       <div class="modal-content">
         <span class="close-modal"><i data-lucide="x"></i></span>
         <div class="modal-body">
           <div class="modal-image-container">
+            <button class="modal-nav prev" id="modal-prev"><i data-lucide="chevron-left"></i></button>
             <img src="" id="modal-img" alt="Projet" />
+            <button class="modal-nav next" id="modal-next"><i data-lucide="chevron-right"></i></button>
+            <div id="image-counter">1 / 1</div>
           </div>
           <div class="modal-text">
             <h2 id="modal-title">Titre du Projet</h2>
-
             <div class="modal-section">
-              <h4>Description du projet :</h4>
+              <h4>Description :</h4>
               <p id="modal-desc"></p>
-            </div>
-
-            <div class="modal-section" id="section-team">
-              <h4>Organisation de l'équipe :</h4>
-              <p id="modal-team"></p>
-            </div>
-
-            <div class="modal-section" id="section-contrib">
-              <h4>Contributions personnelles :</h4>
-              <p id="modal-contrib"></p>
             </div>
           </div>
         </div>
@@ -357,50 +312,60 @@
         const modal = document.getElementById("project-modal");
         const cards = document.querySelectorAll(".clickable-project");
         const closeBtn = document.querySelector(".close-modal");
+        
+        const modalImg = document.getElementById("modal-img");
+        const modalDesc = document.getElementById("modal-desc");
+        const modalTitle = document.getElementById("modal-title");
+        const prevBtn = document.getElementById("modal-prev");
+        const nextBtn = document.getElementById("modal-next");
+        const counter = document.getElementById("image-counter");
+
+        let currentImages = [];
+        let currentDescs = [];
+        let currentIndex = 0;
+
+        const updateModalContent = () => {
+          modalImg.src = currentImages[currentIndex];
+          modalDesc.innerText = currentDescs[currentIndex] ? currentDescs[currentIndex].trim() : "";
+          counter.innerText = `${currentIndex + 1} / ${currentImages.length}`;
+          
+          const showNav = currentImages.length > 1;
+          prevBtn.style.display = showNav ? 'flex' : 'none';
+          nextBtn.style.display = showNav ? 'flex' : 'none';
+          counter.style.display = showNav ? 'block' : 'none';
+        };
 
         cards.forEach((card) => {
           card.onclick = function () {
-            // 1. Récupération des données
-            const img = this.getAttribute("data-img");
-            const title = this.getAttribute("data-title");
-            const desc = this.getAttribute("data-desc");
-            const team = this.getAttribute("data-team");
-            const contrib = this.getAttribute("data-contrib");
+            currentImages = this.getAttribute("data-images").split(",");
+            currentDescs = this.getAttribute("data-descs").split("|");
+            currentIndex = 0;
+            modalTitle.innerText = this.getAttribute("data-title");
 
-            // 2. Remplissage des champs de base
-            document.getElementById("modal-img").src = img;
-            document.getElementById("modal-title").innerText = title;
-            document.getElementById("modal-desc").innerText = desc;
-
-            // 3. Gestion intelligente des sections optionnelles
-            // Section EQUIPE
-            if (team) {
-              document.getElementById("modal-team").innerText = team;
-              document.getElementById("section-team").style.display = "block";
-            } else {
-              document.getElementById("section-team").style.display = "none";
-            }
-
-            // Section CONTRIBUTIONS
-            if (contrib) {
-              document.getElementById("modal-contrib").innerText = contrib;
-              document.getElementById("section-contrib").style.display =
-                "block";
-            } else {
-              document.getElementById("section-contrib").style.display = "none";
-            }
-
-            modal.style.display = "block";
+            updateModalContent();
+            modal.style.display = "flex"; // On utilise flex pour le centrage
             document.body.style.overflow = "hidden";
           };
         });
 
-        closeBtn.onclick = function () {
+        nextBtn.onclick = (e) => {
+          e.stopPropagation();
+          currentIndex = (currentIndex + 1) % currentImages.length;
+          updateModalContent();
+        };
+
+        prevBtn.onclick = (e) => {
+          e.stopPropagation();
+          currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+          updateModalContent();
+        };
+
+        closeBtn.onclick = () => {
           modal.style.display = "none";
           document.body.style.overflow = "auto";
         };
 
-        window.onclick = function (event) {
+        window.onclick = (event) => {
           if (event.target == modal) {
             modal.style.display = "none";
             document.body.style.overflow = "auto";
@@ -410,4 +375,3 @@
     </script>
   </body>
 </html>
-
